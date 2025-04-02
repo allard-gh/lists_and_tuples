@@ -29,31 +29,54 @@ print('list na toevoeging 40 aan het einde van de lijst: ', getallen)  # Het res
 # Verwachte uitkomst: [2, 5, 6, 7, 11, 19, 22]
 # ==========================================
 
+getallenlijst = [2, 4, 7, 11, 19]
 
+getallenlijst.append(22)
+getallenlijst.insert(2, 6)
+getallenlijst[1] = 5
+print(getallenlijst)
 
 # ==========================================
 # Opdracht 2:
 # In de Fibonacci rij bestaat elk getal uit de som van de twee voorgaande getallen: 1, 1, 2, 3, 5, 8 enzovoorts
 # De som van 1 en 1 is 2, de som van 1 en 2 is 3, enzovoorts. Implementeer de functie ‘fibonacci’ die een lijst als parameter meekrijgt.
 # Voer de volgende opdrachten uit:
-# - Maak een variabele aan genaamd 'fibonacci_start_reeks' en geef  die de eerste twee elementen van de Fibonacci reeks.
+# - Maak een variabele aan genaamd 'fibonacci_start_reeks' en geef die de eerste twee elementen van de Fibonacci reeks.
 # - Maak een functie genaamd fibonacci die de fibonacci_reeks uitbreidt met een nieuw element.
 # - Roep de functie 5 keer aan (Bijvoorbeeld met een for-loop).
 # - Print de waarde van de fibonacci_reeks
 #
-# Verwachte uitkomst:   [1, 1, 2, 3, 5, 8, 13]
+# Verwachte uitkomst: [1, 1, 2, 3, 5, 8, 13]
 # ==========================================
 
+fibonacci_reeks = [1, 1]
 
+for i in range(5):
+    fibonacci_reeks.append(fibonacci_reeks[-2] + fibonacci_reeks[-1])
+
+print(fibonacci_reeks)
+# -------------------------------------------------------------------
+# overzichtelijker:
+
+fibonacci_reeks = [1, 1]
+
+for i in range(5):
+    getal_1 = fibonacci_reeks[-2]
+    getal_2 = fibonacci_reeks[-1]
+    fibonacci_reeks.append(getal_1 + getal_2)
+
+print(fibonacci_reeks)
 
 # ==========================================
 # Opdracht 3:
 # Maak een lijst ‘kwadraten’ die de kwadraten bevat van de getallen 1 tot en met 10. Gebruik een for loop.
 #
-# Verwachte uitkomst:  [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+# Verwachte uitkomst: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 # ==========================================
 
+kwadraten = []
 
+for i in range(1, 11):
+    kwadraten.append(i ** 2)
 
-
-
+print(kwadraten)
