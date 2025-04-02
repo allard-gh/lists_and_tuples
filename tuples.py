@@ -24,7 +24,9 @@ print('combined tuple: ', combined_tuple)  # Het resultaat is: (1, 2, 3, 4, 5, 6
 # Verwachte uitkomst:  a b c
 # ==========================================
 
-
+tuple1 = ('b', 'c', 'a')
+print(f'{tuple1[2]}, {tuple1[0]}, {tuple1[1]}')
+print(tuple1[2], tuple1[0], tuple1[1])
 
 # ==========================================
 # Opdracht 2:
@@ -34,7 +36,8 @@ print('combined tuple: ', combined_tuple)  # Het resultaat is: (1, 2, 3, 4, 5, 6
 # Verwachte uitkomst: [(1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]
 # ==========================================
 
-
+getal_kwadraat_paar = [(getal, getal ** 2) for getal in range(1, 6)]
+print(getal_kwadraat_paar)
 
 # =========================================
 # Opdracht 3:
@@ -44,3 +47,7 @@ print('combined tuple: ', combined_tuple)  # Het resultaat is: (1, 2, 3, 4, 5, 6
 #
 # Verwachte uitkomst: (5, 4, 3, 2, 1)
 # ==========================================
+
+tuple_count = (1, 2, 3, 4, 5)
+tuple_count_reverse = tuple(reversed(tuple_count))
+print(tuple_count_reverse)
